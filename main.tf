@@ -44,7 +44,7 @@ data "template_file" "init" {
 }
 
 resource "aws_instance" "airflow-iac" {
-  ami           = "ami-0ed9277fb7eb570c9" # us-west-2
+  ami           = "ami-0ed9277fb7eb570c9"
   instance_type = "t3.medium"
   key_name = "airflow-iac2"
 
