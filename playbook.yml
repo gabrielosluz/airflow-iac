@@ -1,0 +1,12 @@
+- hosts: terraform-airflow-iac
+  tasks:
+  - name: downlaod da imagem
+    shell: curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.2.2/docker-compose.yaml'
+  - name: criando diretorios necessarios
+    shell: mkdir ./dags ./logs ./plugins
+  - name: config de arquivos
+    shell: echo -e "AIRFLOW_UID=$(id -u)" > .env
+  - name: compose das imagens
+    shell: /usr/local/bin/docker-compose up airflow-init 
+  - name: subindo o container
+    shell: /usr/local/bin/docker-compose up -d

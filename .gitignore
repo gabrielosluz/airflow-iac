@@ -1,0 +1,9 @@
+#arquivos .terrform
+**/.terraform/*
+
+#state do terraform
+*.tfstate
+*.tfstate.*
+
+#chave ssh
+*.pem

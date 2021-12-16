@@ -1,0 +1,1 @@
+Projeto contendo código Terraform para provisiona uma EC2 na AWS e um playbook do Ansible para configurar a aplicação Airflow nessa instância.
